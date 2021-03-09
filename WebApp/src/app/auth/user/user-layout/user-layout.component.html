@@ -1,0 +1,19 @@
+<p>user-layout works!</p>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <!--actionChange form user-from.component.ts, fromChildFormActionChange funtion from user-layout.component.ts-->
+      <!-- when actionChange the binding will call the funtion fromChildFormActionChange($event)'-->
+
+      <user-form (actionChange)='fromChildFormActionChange($event)' *ngIf="showCreateForm"> </user-form>
+
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <user-list (actionEditRecord)="onEditRecord($event)"></user-list>
+    </div>
+  </div>
+
+</div>

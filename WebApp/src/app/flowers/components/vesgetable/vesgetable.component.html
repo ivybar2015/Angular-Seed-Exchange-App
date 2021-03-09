@@ -1,0 +1,35 @@
+<h2>vesgetable</h2>
+<!-- create table-->
+<table class = "table table-striped ">
+  <thead>   <!--table title fjor name of the head -->
+    <tr>   <!--table row-->
+      <!--name of each column name-->
+      <th>Action</th>
+      <th>Name</th>
+      <th>Color</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <!-- for the items value in each row-->
+  <tbody>
+    <!-- use *ngFor for loop to assess array-->
+    <!-- <tr *ngFor = "let item of vegetableArr" >
+      <td><button mat-fab color  = "primary">
+           <mat-icon>visibbility</mat-icon>
+          </button>
+      </td>
+    </tr> -->
+
+
+  </tbody>
+
+
+</table>
+<button mat-raised-button [color]="btnVeg" (click)="showVegies()">Show Vegies</button>
+<button mat-raised-button [color]="btnFlower" (click)="showFlowers()" [disabled]="">Show Flowers</button>
+
+<img src='./../../../../assets/images/imgseed/kale.jpg' style="height: 100px; width: auto" *ngIf="showVeg">
+<div *ngIf="showFlower">
+  <img src='./../../../../assets/images/imgflower/red-roses.jpg' style="height: 100px; width: auto">
+</div>

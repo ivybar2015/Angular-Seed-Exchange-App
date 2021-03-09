@@ -1,0 +1,22 @@
+<h2>Seeds</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Name</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th>Picture</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of seddArr">
+      <td><button mat-fab color="primary"><mat-icon>visibility</mat-icon></button></td>
+      <td>{{item.name}}</td>
+      <td><title-button [title]="item.color"></title-button></td>
+      <td>{{item.cost}}</td>
+      <td><flower-image [imagePath]="item.image"></flower-image></td>
+    </tr>
+  </tbody>
+</table>
+

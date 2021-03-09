@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Action</th>
+      <th scope="col">User Name</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataArr">
+      <td><button type="button" class="btn btn-primary" (click)="onEdit(item.Id)">Edit</button> </td>
+      <td>{{item.Username}}</td>
+      <td>{{item.FirstName}}</td>
+      <td>{{item.LastName}}</td>
+    </tr>
+  </tbody>
+</table>

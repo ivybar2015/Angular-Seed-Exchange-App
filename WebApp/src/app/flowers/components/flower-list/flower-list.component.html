@@ -1,0 +1,34 @@
+<!--FOR TEMPLATE-->
+<h2>Flowers</h2>
+<table class="table table-striped">
+  <thead>
+    <!--table head tilte-->
+    <tr>
+      <th>Action</th>
+      <th>Name</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th>Picture</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- have to use 'flowerArr' and double " " to get array propertues into of table as a for loop-->
+    <!-- tr table row -->
+    <tr *ngFor = "let item of flowerArr">
+      <td><button mat-fab color="primary"><mat-icon>visibility</mat-icon></button></td>
+
+      <!--td table data-->
+      <!--TO MAKE UPPER CASE OR LOWER CASE US PIPE '|'THEN uppercase OR lowercase-->
+      <td>{{item.name | uppercase}}</td>
+
+     <!-- [title] inside Title-Button-Component.ts folder is from 'title-button' folder-->
+     <!-- WE PASS "item.color" into  [title] declared at Title-Button-Component.ts folder in  the @Input funtion -->
+      <td><title-button [title] ="item.color"></title-button></td>
+
+      <td>{{item.cost}}</td>
+
+    <!-- 'flower-image'  folder and contain  [imagePath]  inside Flower-Image-Component.ts folder, [] mean binding target -->
+      <td><flower-image [imagePath]="item.image"></flower-image></td>
+    </tr>
+  </tbody>
+</table>
